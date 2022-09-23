@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "bonsai.css": "^1.2.2",
     "preact": "^10.10.6"
   },
   "devDependencies": {
