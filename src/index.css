@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
     --border-radius: 12px;
     --primary: #F3841A;
@@ -8,10 +12,16 @@
     --text-main: #4a4a4a;
     --text-bright: #000;
     --text-muted: #707070;
+    --xs: calc(100% / 4);
+    --sm: calc(100% / 6);
+    --lg: calc(100% / 8);
+    --gap: 12px;
 }
 
-body, html {
+body,
+html {
     background-color: var(--background);
+    margin: 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,7 +29,7 @@ body, html {
         --primary: #F3841A;
         --secondary: #1a89f3;
         --background: #1c1d1f;
-        --background-alt: #3e4044;
+        --background-alt: #2d2e31;
         --selection: #9e9e9e;
         --text-main: #fff;
         --text-bright: #ccc;
@@ -52,4 +62,17 @@ body, html {
         --accent-border: 0;
         --accent-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05); */
     }
+}
+
+/**
+ * Resets
+ */
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
