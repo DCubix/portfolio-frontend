@@ -1,6 +1,6 @@
 <script lang="ts">
     import me from './assets/me.jpg';
-    import { GithubIcon, LinkedinIcon, MailIcon } from 'svelte-feather-icons';
+    import { GithubIcon, LinkedinIcon, MailIcon, LinkIcon } from 'svelte-feather-icons';
     import Card from './lib/components/Card.svelte';
     import { SkillController } from './lib/controller/SkillsController';
     import SkillView from './lib/components/SkillView.svelte';
@@ -62,7 +62,10 @@
                 {#each value as project}
                     <Card style="flex-1" title={project.title}>
                         <div class="flex flex-col">
-                            <p class="text-justify">{project.description}</p>
+                            <p>
+                                {project.description}
+                                <a href={project.url} target="_blank" class="text-cyan-400 flex items-center"><LinkIcon size="16" /> More Info</a>
+                            </p>
                             <div class="flex flex-row flex-wrap">
                                 {#each project.images as image}
                                     <Image src={image} />
