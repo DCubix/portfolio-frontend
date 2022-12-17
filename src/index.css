@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-theme: #47cef0; /* #47cef0 */
+}
+
+@layer components {
+
+  .text-color-theme {
+    @apply text-[color:var(--color-theme)];
+  }
+
+  .profile {
+    @apply bg-[color:var(--color-theme)] w-56 h-56 relative;
+  }
+
+  .profile::before {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-full bg-no-repeat;
+    background-image: url('/src/assets/me.png');
+    background-position: center;
+    background-size: cover;
+    /* mix-blend-mode: multiply; */
+  }
+
+}
